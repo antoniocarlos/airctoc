@@ -1,0 +1,77 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* NavBar */
+.nav {
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  margin: 0;
+  box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  margin: auto 0;
+  padding: 0;
+}
+
+/* searchBar */
+.searchBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Card */
+.card {
+  min-width: 500px;
+  margin: 10px 0;
+  box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.img-fluid {
+  height: auto;
+  max-width: 250px;
+}
+
+.sideMap {
+  margin: 0;
+  padding: 0;
+}
+
+.map {
+  top: 95px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+/* Content */
+.contentHeader {
+  margin-top: 100px;
+}
+
+.contentFooter {
+  margin-top: 10px;
+  padding: 16px;
+}
