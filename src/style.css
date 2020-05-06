@@ -36,6 +36,9 @@ body {
 }
 
 /* Card */
+.cards {
+  min-height: 500px;
+}
 .card {
   min-width: 500px;
   margin: 10px 0;
