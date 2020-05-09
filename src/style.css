@@ -119,9 +119,13 @@ body {
 
 .contentFooter {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-top: 10px;
   padding: 16px;
+}
+
+.contentFooter a {
+  margin: auto;
 }
 
 .contentFooter select {
