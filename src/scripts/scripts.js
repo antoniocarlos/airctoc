@@ -37,20 +37,20 @@ function renderCards(apartments, page, limitPerPage) {
 
       var propertyTypeElement = document.createElement('p');
       propertyTypeElement.setAttribute('class', 'card-text');
-      var propertyTypeElementText = document.createTextNode("Tipo de propriedade: " + apartments[i].property_type);
+      var propertyTypeElementText = document.createTextNode("Tipo de propriedade: " + apartments[i].propertyType);
       propertyTypeElement.appendChild(propertyTypeElementText);
 
       let valuePriece = apartments[i].price
 
       var priceElement = document.createElement('p');
       priceElement.setAttribute('class', 'card-text');
-      var priceElementElementText = document.createTextNode("Preço da diária: $" + valuePriece);
+      var priceElementElementText = document.createTextNode("Preço da diária: $" + valuePriece + ",00");
       priceElement.appendChild(priceElementElementText);
 
 
       var totalPriceElement = document.createElement('p');
       totalPriceElement.setAttribute('class', 'card-text');
-      var totalPriceElementText = document.createTextNode(`Preço total: $${valuePriece * daysOfStay}`);
+      var totalPriceElementText = document.createTextNode(`Preço total: $${valuePriece * daysOfStay},00`);
       totalPriceElement.appendChild(totalPriceElementText);
 
       bodyElement.appendChild(cardTitleElement);
@@ -128,13 +128,13 @@ var selectElement = document.querySelector('#select');
 function search() {
   let interApartments = [];
 
-  if(selectElement.value.includes("Todas as localidades")){
-    
+  if (selectElement.value.includes("Todas as localidades")) {
+
     apartmentsInUse = apartments;
 
-  }else{
-    for(apartment of apartments){
-      if(apartment.location.includes(selectElement.value)){
+  } else {
+    for (apartment of apartments) {
+      if (apartment.location.includes(selectElement.value)) {
         interApartments.push(apartment);
       }
     }
@@ -143,6 +143,18 @@ function search() {
   page = 0;
   renderCards(apartmentsInUse, page, limitPerPage);
   renderPagination(page, apartmentsInUse.length / limitPerPage);
+  renderMap(selectElement.value);
+}
+
+//Maps
+var iframeMapElement = document.querySelector('#iframeMap');
+
+function renderMap(location) {
+  if (location.includes("Todas as localidades")) {
+    iframeMapElement.setAttribute("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31760465.329205003!2d-69.71823501470723!3d-13.657159891786419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e0!3m2!1spt-BR!2sbr!4v1588986594628!5m2!1spt-BR!2sbr");
+  } else {
+    iframeMapElement.setAttribute("src", apartmentsInUse[0].iframe);
+  }
 }
 
 //Price Update

@@ -44,6 +44,10 @@ body {
   border-radius: 0px 10px 10px 0px;
 }
 
+.btn-primary {
+  border-color: none;
+}
+
 .custom-select {
   margin: auto 0;
   text-align: center;
@@ -52,6 +56,10 @@ body {
 
 #select {
   border-radius: 10px 0px 0px 10px;
+}
+
+#timeImput {
+  cursor: pointer;
 }
 
 /* Card */
