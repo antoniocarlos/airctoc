@@ -1,5 +1,15 @@
-AirCtoC
+Check this app online: [airctoc](https://airctoc.netlify.app/#)
 
-Bem vindo ao AirCtoC uma simulação de site para aluguel de imóveis.
+## 🚢 AirCtoC
 
-Este projeto foi criado para o segundo desafio do programa hiring coders da gama academy.
+![AirCtoC gif](airctoc.gif)
+
+AirCtoC is a simulation of the [Airbnb](https://www.airbnb.com.br/), a popular site to rent rooms.
+This project was created for the second challenge of the Gama Academy Hiring Coders 2020.
+
+### 💻 Technologies
+This project was developed using Vanilla.js, Bootstrap, HTML, CSS.
+
+**Libraries and packages:**<br>
+**js fetch:** Making external calls to APIs.<br>
+**google maps:** Used to display google maps by iframe.<br>
