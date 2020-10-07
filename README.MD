@@ -13,3 +13,6 @@ This project was developed using Vanilla.js, Bootstrap, HTML, CSS.
 **Libraries and packages:**<br>
 **js fetch:** Making external calls to APIs.<br>
 **google maps:** Used to display google maps by iframe.<br>
+
+### ⚖ LICENSE
+The project can be copied and modified, as long as due credit is given.
